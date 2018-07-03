@@ -1,4 +1,4 @@
-import urllib
+import urllib.request
 import datetime
 from bs4 import BeautifulSoup
 from ics import Calendar, Event
@@ -135,7 +135,7 @@ def main():
         location = get_location(data)
         begin, is_all_day = get_full_launchtime(datename, data)
 
-        if begin and not is_all_day:
+        if begin:
             event = Event()
             event.begin = begin
             event.description = desc.text
@@ -147,10 +147,10 @@ def main():
 
             calendar.events.add(event)
 
-    with open("launches.ics", "w") as outfile:
+    with open("/home/momadoki/html/launches/launches.ics", "w") as outfile:
         outfile.writelines(calendar)
 
     print(calendar.events)
-
+    print(len(calendar.events))
 if __name__ == "__main__":
     main()
