@@ -16,5 +16,5 @@ You can subscribe to a daily updated webcal [here](https://momadoki.uber.space/l
 
 # TODO
 - Docstrings
-- `setup.py`
+- Write a `setup.py`
 - Display correct end of launch windows
