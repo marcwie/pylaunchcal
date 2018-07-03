@@ -1,5 +1,5 @@
 # pylaunchcal
-Create an ics calendar file for future space flight launches
+Create an ics calendar file for future space flight launches.
 
 The scripts parses the [launch schedule of spaceflightnow](https://spaceflightnow.com/launch-schedule/) and creates an iCalendar file that can be imported into any common calendar application.
 
