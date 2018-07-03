@@ -1,5 +1,6 @@
 import urllib.request
 import datetime
+import argparse
 from bs4 import BeautifulSoup
 from ics import Calendar, Event
 
@@ -127,6 +128,15 @@ def get_full_launchtime(datename, missiondata):
     return begin, is_all_day
 
 def main():
+    parser = argparse.Argparser = argparse.ArgumentParser(
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument("-o", "--output-filename", dest="outfile",
+                        required=True, type=str)
+    args = parser.parse_args()
+    run(args.outfile)
+
+
+def run(output_file):
     calendar = Calendar()
     datenames, missiondatas, descriptions = parse_website()
 
@@ -147,10 +157,12 @@ def main():
 
             calendar.events.add(event)
 
-    with open("/home/momadoki/html/launches/launches.ics", "w") as outfile:
+    with open(output_file, "w") as outfile:
         outfile.writelines(calendar)
 
     print(calendar.events)
     print(len(calendar.events))
+
+
 if __name__ == "__main__":
     main()
