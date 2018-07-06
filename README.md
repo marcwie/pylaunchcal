@@ -12,7 +12,7 @@ Use `pip install beatifulsoup4 ics` to install all necessary packages. Then just
 Run the script with `python3 launch_calendar.py -o PATH_TO_OUTPUT_FILE`. Set up a cron job to run the script automatically. 
 
 # Subscription
-You can subscribe to a daily updated webcal [here](https://momadoki.uber.space/launches/launches.ics). 
+If you are only interested in the final product, you can subscribe to a daily updated webcal containing all launches [here](https://momadoki.uber.space/launches/launches.ics). 
 
 # TODO
 - Docstrings
