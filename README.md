@@ -1,3 +1,5 @@
+This repo is outdated and no longer maintained. 
+
 # pylaunchcal
 Create an ics calendar file for future space flight launches.
 
@@ -12,7 +14,9 @@ Use `pip install beatifulsoup4 ics` to install all necessary packages. Then just
 Run the script with `python3 launch_calendar.py -o PATH_TO_OUTPUT_FILE`. Set up a cron job to run the script automatically. 
 
 # Subscription
-If you are only interested in the final product, you can subscribe to a daily updated webcal containing all launches [here](https://momadoki.uber.space/launches/launches.ics). 
+The update of the webcal is currently broken due to changes in the layout of the [launch schedule of spaceflightnow](https://spaceflightnow.com/launch-schedule/). 
+
+~~If you are only interested in the final product, you can subscribe to a daily updated webcal containing all launches [here](https://momadoki.uber.space/launches/launches.ics).~~
 
 # TODO
 - Docstrings
